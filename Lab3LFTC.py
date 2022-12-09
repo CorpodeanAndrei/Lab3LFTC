@@ -4,7 +4,6 @@ if __name__ == '__main__':
     init=[]
     alfabet=[]
     fn=[]
-    
     i=open("inputlab3.txt", "r")
     
     inpt = i.read().split("\n") 
@@ -14,23 +13,20 @@ if __name__ == '__main__':
         right=linii[1]  
         state=left.split(",")[0][1:]
         caracter=left.split(",")[1][0:-1]
-        
-        if caracter not in alfabet:
-            alfabet.append(caracter)
-            
         if state not in states:
             if state[0] == "{":
                 state=state.replace("{", "").replace("}", "") 
                 if state not in init:
                     init.append(state)
             states.append(state)
+        if caracter not in alfabet:
+            alfabet.append(caracter)
         if right[0] == "(":
             elem=right.replace("(", "").replace(")", "")
             if elem not in fn:
                 fn.append(elem)
             if elem not in states:
                 states.append(elem)
-
             tranzitii.append([state, elem])
         if right[0] == "[":
             elem = right.replace("[", "").replace("]", "")
