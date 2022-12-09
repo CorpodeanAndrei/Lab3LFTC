@@ -33,8 +33,8 @@ if __name__ == '__main__':
             if elem not in states:
                 states.append(elem)
             tranzitii.append([state, elem])
-    print("Alfabet:\n", alfabet, "\n")
-    print("Initial state:\n", init, "\n")
-    print("Final states:\n", fn, "\n")
-    print("Stari:\n", states, "\n")
-    print("Tranzitii:\n", tranzitii, "\n")
+    print("Alfabetul este-> \n", alfabet, "\n")
+    print("Starea initiala este-> \n", init, "\n")
+    print("Starea finala este-> \n", fn, "\n")
+    print("Starile sunt-> \n", states, "\n")
+    print("Tranzitiile sunt-> \n", tranzitii, "\n")
